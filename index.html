@@ -1,56 +1,515 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Canaima Universitario by CanaimaUniversitario</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/CanaimaUniversitario">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+<!-- Plantilla -->
 
-    <div class="wrapper">
+	<link href="Template/css/bootstrap.min.css" rel="stylesheet">
+	<link href="Template/css/freelancer.css" rel="stylesheet">
+	<link href="Template/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-      <section>
-        <div id="title">
-          <h1>Canaima Universitario</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/CanaimaUniversitario">CanaimaUniversitario</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+<!-- Fin plantilla -->
 
-        <h3>
-<a id="proyecto-canaima-universitario" class="anchor" href="#proyecto-canaima-universitario" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proyecto Canaima Universitario</h3>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-<div align="justify">
-  <p>Deseamos de manera innovadora integrar nuevos talentos humanos a cada una de las etapas de: organización, desarrollo, difusión, estudio, apropiación, capacitación y documentación del proyecto Canaima GNU/Linux; como medio oportuno para lograr la soberanía e independencia tecnológica en Venezuela mediante la formación de una generación de relevo en áreas de tecnologías libres, participes de los proyectos sociotecnológicos nacionales y con perfiles humanistas, sociales e integrales.</p>
+	<title>Canaima Universitario</title>
 
-  <p>Anímate y participa con nosotros en Canaima Universitario para que juntos avancemos en el sueño de un modelo de formación complementario, actualizado, paralelo, opcional, libre y participativo al hecho de formación académica en el contexto universitario en Venezuela; basado en la Pedagogía de la Liberación, el Conocimiento Libre y en la construcción social-comunitaria del conocimiento; con intenciones de ofertar a estudiantes, profesionales, formadores; activistas e investigadores la oportunidad de capacitarse en todas las etapas relacionadas al proceso de desarrollo e implementación de proyectos sociotecnológicos nacionales basados en tecnologías libres, principalmente Canaima GNU/Linux.</p>
-</div>
-<h3>
-<a id="contactos" class="anchor" href="#contactos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contactos</h3>
+	<link rel="shortcut icon" type="image/x-icon" href="css/img/favicon.png" />
 
-<p><a href="http://universitario.canaima.net.ve">http://universitario.canaima.net.ve</a> o <a href="mailto:canaimauniversitario@uptm.edu.ve">canaimauniversitario@uptm.edu.ve</a> </p>
-      </section>
+	<style>
+		@font-face {
+			font-family: "CanaimaUniversitario";
+			src: url("css/fonts/CanaimaUniversitario.ttf");
+			font-weight: normal;
+			font-style: normal;
+		}
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+		@font-face {
+			font-family: "FreeMono";
+			src: url("css/fonts/FreeMono.ttf");
+		}
+
+		body {
+			color: #212121;
+			font-family: "FreeMono";
+		}
+
+		/* Barra de navegación */
+
+		.navbar-default {
+			background: #212121;
+		}
+
+		.navbar-brand {
+			padding: 0em;
+		}
+
+		.navbar-brand img {
+			height: 2em;
+			width: 8em;
+
+			transition: 0.5s;
+		}
+
+		.navbar-fixed-top.navbar-shrink .navbar-brand {
+			padding-top: 0.4em;
+		}
+
+		@media(max-width:768px) {
+			.navbar-brand {
+				padding: 0.5em;
+			}
+		}
+
+		.navbar-nav > .active > a,
+		.navbar-default .navbar-nav>.active>a:hover,
+		.navbar-default .navbar-nav>.active>a:focus {
+			background: #ccc !important;
+		}
+
+			/* Botón scroll */
+
+		.scroll-top {
+			bottom: 1.5em;
+		}
+
+
+
+		/* Enlaces */
+
+		a {
+			color: #6d8d24 !important;
+
+			transition: 0.5s;
+		}
+
+		a:hover {
+			color: #fff !important;
+		}
+
+
+
+		/* Header */
+
+		header {
+			background: url("css/img/1.jpg") #212121 no-repeat;
+			background-size: 100% 100%;
+
+			animation: bg 40s infinite;
+			-webkit-animation: bg 40s infinite;
+		}
+
+		header img {
+			width: 20em;
+		}
+
+			/* Fondo dinámico */
+
+		@keyframes bg {
+			0% {
+				background-image: url("css/img/1.jpg");
+			}
+
+			25% {
+				background-image: url("css/img/2.jpg");
+			}
+
+			50% {
+				background-image: url("css/img/3.jpg");
+			}
+
+			75% {
+				background-image: url("css/img/4.jpg");
+			}
+		}
+
+		@-webkit-keyframes bg {
+			0% {
+				background-image: url("css/img/1.jpg");
+			}
+
+			25% {
+				background-image: url("css/img/2.jpg");
+			}
+
+			50% {
+				background-image: url("css/img/3.jpg");
+			}
+
+			75% {
+				background-image: url("css/img/4.jpg");
+			}
+		}
+
+
+
+		/* Secciones */
+
+		section {
+			background: #ccc;
+		}
+
+		section.success {
+			background: #212121 !important;
+		}
+
+		section.success .btn-outline {
+			border-color: #6d8d24;
+		}
+
+		section.success a:hover,
+		footer a:hover {
+			color: #6d8d24 !important;
+		}
+
+		hr
+		{
+			padding-bottom: 1em !important;
+		}
+
+		hr.star-primary {
+			color: #212121;
+			border-color: #212121;
+		}
+
+		hr.star-light:after,
+		hr.star-primary:after {
+			content: "\e600";
+			font-family: "CanaimaUniversitario";
+			background: #ccc;
+			color: inherit;
+		}
+
+		section.success hr.star-light:after,
+		section.success hr.star-primary:after {
+			background: #212121;
+		}
+
+		section p::first-letter,
+		strong {
+			font-size: 1.3em;
+		}
+
+			/* Proyectos */
+
+		.portfolio-item img {
+			height: 270px;
+			width: 100%;
+		}
+
+		.portfolio-item .caption-content {
+			font-size: 2em !important;
+			margin-top: -0.5em !important;
+		}
+
+		#portfolio .portfolio-item .portfolio-link .caption {
+			background: #6d8d24;
+		}
+
+		#viewer {
+			height: 50%;
+			width: 100%;
+
+			background: gray;
+
+			position: fixed;
+			top: 50%;
+			left: 0em;
+			z-index: 10000;
+		}
+
+		/* Footer */
+
+		footer div {
+			background: #212121 !important;
+		}
+
+		footer .btn-outline {
+			color: #6d8d24;
+		}
+
+		.btn-outline:hover,
+		.btn-outline:focus,
+		.btn-outline:active,
+		.btn-outline.active {
+			color: #6d8d24;
+		}
+	</style>
+</head>
+<body id="page-top" class="index">
+
+<!-- Barra de navegación -->
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+
+	<!-- Botón menú responsive -->
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+	<!-- Fin botón menú responsive -->
+
+	<!-- Icono principal -->
+
+				<a class="navbar-brand" href="#page-top"><img src="css/img/logo.png" /></a>
+
+	<!-- Fin icono principal -->
+
+			</div>
+
+	<!-- Menú -->
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<li class="page-scroll">
+						<a href="#acerca">Acerca</a>
+					</li>
+					<li class="page-scroll">
+						<a href="#portfolio">Proyectos</a>
+					</li>
+					<li class="page-scroll">
+						<a href="#integrantes">Integrantes</a>
+					</li>
+					<li class="page-scroll">
+						<a href="#contacto">Contactenos</a>
+					</li>
+				</ul>
+			</div>
+
+	<!-- Fin menú -->
+
+		</div>
+	</nav>
+
+	<!-- Botón scroll -->
+
+	<div class="scroll-top page-scroll">
+		<a href="#page-top">
+			<span class="fa fa-stack fa-2x">
+				<i class="fa fa-circle-o fa-stack-2x" ></i>
+				<i class="fa fa-chevron-up fa-stack-1x"></i>
+			</span>
+		</a>
+	</div>
+
+	<!-- Fin botón scroll -->
+
+<!-- Fin barra de navegación -->
+
+<!-- Header -->
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<img class="img-responsive" src="css/img/perfil.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</header>
+
+<!-- Fin header -->
+
+<!-- Acerca -->
+
+	<section id="acerca">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Acerca</h2>
+					<hr class="star-primary">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1 text-justify">
+					<p>Deseamos de manera innovadora integrar nuevos talentos humanos a cada una de las etapas de: organización, desarrollo, difusión, estudio, apropiación, capacitación y documentación del proyecto <strong>Canaima GNU/Linux</strong>; como medio oportuno para lograr la soberanía e independencia tecnológica en Venezuela mediante la formación de una generación de relevo en áreas de tecnologías libres, participes de los proyectos sociotecnológicos nacionales y con perfiles humanistas, sociales e integrales.</p>
+					<p>Anímate y participa con nosotros en <strong>Canaima Universitario</strong> para que juntos avancemos en el sueño de un modelo de formación complementario, actualizado, paralelo, opcional, libre y participativo al hecho de formación académica en el contexto universitario en <strong>Venezuela</strong>; basado en la Pedagogía de la Liberación, el <strong>Conocimiento Libre</strong> y en la construcción social-comunitaria del conocimiento; con intenciones de ofertar a estudiantes, profesionales, formadores; activistas e investigadores la oportunidad de capacitarse en todas las etapas relacionadas al proceso de desarrollo e implementación de proyectos sociotecnológicos nacionales basados en tecnologías libres, principalmente <strong>Canaima GNU/Linux</strong>.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- Fin acerca -->
+
+<!-- Proyectos -->
+
+	<section id="portfolio" class="success">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Proyectos</h2>
+					<hr class="star-light">
+				</div>
+			</div>
+
+			<div class="row">
+
+	<!-- Elementos -->
+
+				<div class="col-sm-4 portfolio-item">
+					<a href="javascript: viewer('official-url')" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								inFORM
+							</div>
+						</div>
+						<img src="css/img/Proyectos/inform.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+
+				<div class="col-sm-4 portfolio-item">
+					<a href="javascript: viewer('official-url')" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								Kirobo
+							</div>
+						</div>
+						<img src="css/img/Proyectos/kirobo.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+
+				<div class="col-sm-4 portfolio-item">
+					<a href="javascript: viewer('official-url')" class="portfolio-link" data-toggle="modal">
+						<div class="caption">
+							<div class="caption-content">
+								VibeTunes
+							</div>
+						</div>
+						<img src="css/img/Proyectos/vibetunes.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+
+	<!-- Fin elementos -->
+
+			</div>
+
+	<!-- Visor de proyectos -->
+
+			<!--<div id="viewer"><object height="100%" width="100%" type="text/html" data="index.html"></object></div>-->
+
+	<!-- Fin visor de proyectos -->
+
+		</div>
+	</section>
+
+<!-- Fin proyectos -->
+
+<!-- Integrantes -->
+
+	<section id="integrantes">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Integrantes</h2>
+					<hr class="star-primary">
+				</div>
+			</div>
+			<div class="row">
+			</div>
+		</div>
+	</section>
+
+<!-- Fin integrantes -->
+
+
+<!-- Footer -->
+
+	<footer id="contacto" class="text-center">
+		<div class="footer-above">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col col-md-4">
+						<h3>Contactos</h3>
+
+						<ul class="list-inline">
+							<li>
+								<a href="http://github.com/CanaimaUniversitario" title="GitHub" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-lg fa-github"></i></a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/pages/Canaima-Universitario/617909431646761" title="Facebook" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="https://twitter.com/canaimauniversi" title="Twitter" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-lg fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="https://telegram.me/joinchat/03e01210004651253cac6b77332d7f88" title="Telegram" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-paper-plane"></i></a>
+							</li>
+						</ul>
+
+						canaimauniversitario@uptm.edu.ve
+					</div>
+
+					<div class="footer-col col-md-8">
+						<h3><i class="fa fa-cog fa-spin"></i> En construcción <i class="fa fa-cog fa-spin"></i></h3>
+						<p><strong>Canaima Universitario</strong> aún está en construcción..</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-below">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						Canaima Universitario 2015
+						<div class="small">Powered by <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Freelancer</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+<!-- Fin footer -->
+
+<!-- Plantilla -->
+
+	<script src="Template/js/jquery.js"></script>
+	<script src="Template/js/bootstrap.min.js"></script>
+	<script src="Template/js/classie.js"></script>
+	<script src="Template/js/cbpAnimatedHeader.js"></script>
+	<script src="Template/js/jqBootstrapValidation.js"></script>
+	<script src="Template/js/contact_me.js"></script>
+	<script src="Template/js/freelancer.js"></script>
+
+<!-- Fin plantilla -->
+
+	<script>
+		$(function() {
+			$('a[href*=#]').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var $target = $(this.hash);
+
+					$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+					if ($target.length) {
+						var targetOffset = $target.offset().top;
+
+						$('html,body').animate({scrollTop: targetOffset}, 1000);
+
+						return false;
+					}
+				}
+			});
+		});
+
+		function viewer(url) {
+			$('#viewer object').attr('data', url);
+		}
+	</script>
+
+</body>
 </html>
